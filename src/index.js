@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createServer} from './server';
+
+if (process.env.NODE_ENV === "development") {
+  createServer()
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App id="1" />
   </React.StrictMode>,
   document.getElementById('root')
 );
